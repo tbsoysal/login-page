@@ -139,3 +139,20 @@ form {
   background-color: white;
   border-radius: 50%;
 }
+
+/* Button */
+
+.submitBtn {
+  width: 90%;
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 2rem;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  border-radius: 0.5rem;
+  border: none;
+  color: var(--highlight-color);
+  font-size: 1.1rem;
+}
