@@ -103,3 +103,39 @@ form {
   right: 1rem;
   top: 0.6rem;
 }
+
+/* Remember toggler */
+
+.rememberText {
+  margin-left: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 40px;
+  height: 25px;
+  background: #34c759;
+  border-radius: 3rem;
+  padding: 2px 0px;
+  padding-left: 1.1rem;
+  transition: padding 0.3s ease;
+}
+
+.toggleContainer.off {
+  padding-left: 4px;
+  background-color: #c73436;
+}
+
+.toggleContainer .circle {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+}
