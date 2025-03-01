@@ -8,7 +8,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState<"login" | "signup">("login");
   return (
     <>
-      <Header />
+      <Header currentPage={currentPage} />
       <PageToggler currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <LogInForm />
     </>
