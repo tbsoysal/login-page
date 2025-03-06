@@ -85,7 +85,7 @@ form {
 }
 
 .input-container .input-label {
-  width: 15%;
+  width: 40%;
 }
 
 .input-container input {
@@ -94,7 +94,7 @@ form {
   font-size: 18px;
   margin: 0 1.7rem 0 2rem;
   min-width: 0;
-  width: 60%;
+  width: 100%;
   caret-color: var(--highlight-color);
 }
 
