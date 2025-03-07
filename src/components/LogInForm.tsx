@@ -1,10 +1,19 @@
 import InputBox from "./InputBox";
+import SubmitButton from "./SubmitButton";
 
 function LogInForm() {
   return (
     <form>
-      <InputBox textField={"Email"} inputType={"email"} />
-      <InputBox textField={"Password"} inputType={"password"} />
+      <InputBox
+        textField={"Email"}
+        inputType={"email"}
+        placeHolder={"Enter your email"}
+      />
+      <InputBox
+        textField={"Password"}
+        inputType={"password"}
+        placeHolder={"Enter password"}
+      />
       <p className="rememberText">
         Remember me{" "}
         <span
@@ -14,6 +23,7 @@ function LogInForm() {
           <span className="circle"></span>
         </span>
       </p>
+      <SubmitButton text="Login" />
     </form>
   );
 }

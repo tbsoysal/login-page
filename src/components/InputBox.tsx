@@ -3,9 +3,10 @@ import { useState } from "react";
 type Props = {
   textField: string;
   inputType: string;
+  placeHolder: string;
 };
 
-function InputBox({ textField, inputType }: Props) {
+function InputBox({ textField, inputType, placeHolder }: Props) {
   const [inputText, setInputText] = useState<string>("");
   return (
     <div className="input-container">
@@ -13,6 +14,7 @@ function InputBox({ textField, inputType }: Props) {
       <input
         type={inputType}
         value={inputText}
+        placeholder={placeHolder}
         onChange={(e) => setInputText(e.target.value)}
       />
       {inputText && (
