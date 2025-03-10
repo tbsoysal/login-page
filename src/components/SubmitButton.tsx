@@ -4,13 +4,12 @@ type Props = {
 
 function SubmitButton({ text }: Props) {
   return (
-    <button
+    <input
       type="submit"
       onClick={() => location.reload()}
       className="submitBtn"
-    >
-      {text}
-    </button>
+      value={text}
+    />
   );
 }
 
