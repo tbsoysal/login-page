@@ -37,7 +37,7 @@ function LogInForm() {
           <span className="circle"></span>
         </span>
       </p>
-      <SubmitButton text="Login" />
+      <SubmitButton formData={formData} text="Login" />
     </form>
   );
 }
