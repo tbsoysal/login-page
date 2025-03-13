@@ -15,6 +15,20 @@ function SignUpForm() {
     password: "",
     confirm: "",
   });
+  const validateForm = (e: React.MouseEvent<HTMLInputElement | MouseEvent>) => {
+    e.preventDefault();
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    let errorObj = {
+      email: "",
+      password: "",
+    };
+    if (!formData.email || !emailPattern.test(formData.email))
+      errorObj.email = "Invalid email!";
+
+    if (formData.password.length < 4) errorObj.password = "Invalid password!";
+
+    setFormErrors(errorObj);
+  };
   return (
     <form>
       <InputBox
@@ -45,7 +59,12 @@ function SignUpForm() {
         setFormData={setFormData}
         formErrors={formErrors}
       />
-      <input type="submit" className="submitBtn" value="Sign up" />
+      <input
+        onClick={(e) => validateForm(e)}
+        type="submit"
+        className="submitBtn"
+        value="Sign up"
+      />
     </form>
   );
 }
