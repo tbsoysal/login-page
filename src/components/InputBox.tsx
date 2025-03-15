@@ -22,6 +22,7 @@ function InputBox({
   const setNewStates = (newVal: string) => {
     setInputText(newVal);
     if (textField === "Confirm") inputType = "confirm";
+    if (textField === "Full Name") inputType = "fullname";
     setFormData((prev) => ({
       ...prev,
       [inputType]: newVal,

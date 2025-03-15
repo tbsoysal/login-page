@@ -27,7 +27,7 @@ function SignUpForm() {
     if (!formData.email || !emailPattern.test(formData.email))
       errorObj.email = "Invalid email!";
 
-    if (formData.password.length < 4) errorObj.password = "Invalid password!";
+    if (!formData.password) errorObj.password = "Invalid password!";
 
     if (!formData.fullname) errorObj.fullname = "Invalid name!";
 
