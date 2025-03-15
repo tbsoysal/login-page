@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { errors, formFields } from "./LogInForm";
+import { formFields } from "./LogInForm";
 
 export interface Props {
   textField: string;
   inputType: string;
   placeHolder: string;
-  formErrors: errors;
+  inputError: string | undefined;
   setFormData: React.Dispatch<React.SetStateAction<formFields>>;
 }
 
@@ -14,12 +14,13 @@ function InputBox({
   inputType,
   placeHolder,
   setFormData,
-  formErrors,
+  inputError,
 }: Props) {
   const [inputText, setInputText] = useState<string>("");
 
   const setNewStates = (newVal: string) => {
     setInputText(newVal);
+    if (textField === "Confirm") inputType = "confirm";
     setFormData((prev) => ({
       ...prev,
       [inputType]: newVal,
@@ -42,7 +43,7 @@ function InputBox({
           </span>
         )}
       </div>
-      {formErrors[inputType as keyof errors] ? (
+      {inputError ? (
         <p
           style={{
             color: "#FF3B30",
@@ -54,7 +55,7 @@ function InputBox({
             fontWeight: "500",
           }}
         >
-          {formErrors[inputType as keyof errors]}
+          {inputError}
         </p>
       ) : (
         <></>

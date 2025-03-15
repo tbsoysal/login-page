@@ -47,14 +47,14 @@ function LogInForm() {
         inputType={"email"}
         placeHolder={"Enter your email"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.email}
       />
       <InputBox
         textField={"Password"}
         inputType={"password"}
         placeHolder={"Enter password"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.password}
       />
       <p className="rememberText">
         Remember me{" "}

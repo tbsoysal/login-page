@@ -19,13 +19,21 @@ function SignUpForm() {
     e.preventDefault();
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     let errorObj = {
+      fullname: "",
       email: "",
       password: "",
+      confirm: "",
     };
     if (!formData.email || !emailPattern.test(formData.email))
       errorObj.email = "Invalid email!";
 
     if (formData.password.length < 4) errorObj.password = "Invalid password!";
+
+    if (!formData.fullname) errorObj.fullname = "Invalid name!";
+
+    if (formData.password !== formData.confirm) {
+      errorObj.confirm = "Passwords does not match!";
+    }
 
     setFormErrors(errorObj);
   };
@@ -36,28 +44,28 @@ function SignUpForm() {
         inputType={"text"}
         placeHolder={"Enter your name"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.fullname}
       />
       <InputBox
         textField={"Email"}
         inputType={"email"}
         placeHolder={"Enter your email"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.email}
       />
       <InputBox
         textField={"Password"}
         inputType={"password"}
         placeHolder={"Create a password"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.password}
       />
       <InputBox
         textField={"Confirm"}
         inputType={"password"}
         placeHolder={"Rewrite password"}
         setFormData={setFormData}
-        formErrors={formErrors}
+        inputError={formErrors.confirm}
       />
       <input
         onClick={(e) => validateForm(e)}
