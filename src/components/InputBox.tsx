@@ -17,6 +17,7 @@ function InputBox({
   inputError,
 }: Props) {
   const [inputText, setInputText] = useState<string>("");
+  const [focused, setFocused] = useState<boolean>(false);
 
   const setNewStates = (newVal: string) => {
     setInputText(newVal);
@@ -36,8 +37,12 @@ function InputBox({
           value={inputText}
           placeholder={placeHolder}
           onChange={(e) => setNewStates(e.target.value)}
+          onFocus={() => setFocused(true)}
+          onBlur={() => {
+            setTimeout(() => setFocused(false), 50);
+          }}
         />
-        {inputText && (
+        {focused && inputText && (
           <span className="inputIcon" onClick={() => setNewStates("")}>
             <img src="./reset.svg" />
           </span>
