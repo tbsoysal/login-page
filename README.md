@@ -66,10 +66,6 @@ git push origin feature-name
 # Open a Pull Request
 ```
 
-## License
-
-This project is licensed under the MIT License.
-
 ## Contact
 
 📧 Email: berksysl.g@gmail.com
