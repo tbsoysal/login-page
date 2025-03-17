@@ -45,8 +45,7 @@ npm run dev  # or yarn dev
 - **Confirm Password**: Must match the password field.
 
 ## Screenshots
-
-_(Add screenshots here if available)_
+![Screenshot from 2025-03-17 10-33-17](https://github.com/user-attachments/assets/f302e3a1-379d-41a0-9297-b662a6371906)![Screenshot from 2025-03-17 10-33-24](https://github.com/user-attachments/assets/de2341b6-e3d1-437f-ba18-82955bfd278a)
 
 ## Contributing
 
