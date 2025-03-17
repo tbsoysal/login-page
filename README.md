@@ -20,7 +20,7 @@ A modern and sleek login/signup page inspired by Apple's design, built with **Vi
 
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/apple-style-login.git
+git clone https://github.com/tbsoysal/apple-style-login.git
 
 # Navigate into the project directory
 cd apple-style-login
@@ -70,5 +70,5 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-📧 Email: your.email@example.com  
-🐙 GitHub: [@yourusername](https://github.com/yourusername)
+📧 Email: berksysl.g@gmail.com
+🐙 GitHub: [@tbsoysal](https://github.com/tbsoysal)
