@@ -16,6 +16,9 @@ A modern and sleek login/signup page inspired by Apple's design, built with **Vi
 - **TypeScript** (Static typing)
 - **CSS** (For styling)
 
+## Live Demo
+🔗 GitHub Pages Live Link: https://tbsoysal.github.io/login-page
+
 ## Installation
 
 ```sh
