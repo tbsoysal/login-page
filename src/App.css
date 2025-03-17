@@ -94,7 +94,7 @@ form {
   border: none;
   outline: none;
   font-size: 18px;
-  margin: 0 1.7rem 0 2rem;
+  margin-right: 1.7rem;
   min-width: 0;
   width: 100%;
   caret-color: var(--highlight-color);
