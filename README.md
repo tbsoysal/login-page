@@ -20,10 +20,10 @@ A modern and sleek login/signup page inspired by Apple's design, built with **Vi
 
 ```sh
 # Clone the repository
-git clone https://github.com/tbsoysal/apple-style-login.git
+git clone https://github.com/tbsoysal/login-page.git
 
 # Navigate into the project directory
-cd apple-style-login
+cd login-page
 
 # Install dependencies
 npm install  # or yarn install
